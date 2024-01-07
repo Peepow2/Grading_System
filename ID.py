@@ -17,7 +17,6 @@ def saved_pass():
 
 def get_ID():    
     I = saved_pass()
-    code = ('0000' + str(I))[-4:]
-    check = ((int(code[0]) * 3 + int(code[1]) * 5 + \
-            int(code[2]) * 7 + int(code[3]) * 11) * 13) % 10
+    code = ('000' + str(I))[-4:]
+    check = sum([int(e) for e in code]) % 10
     return '683' + code + str(check)
