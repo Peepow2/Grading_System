@@ -76,6 +76,5 @@ if PRINT: os.startfile("Simple.pdf", "print")
 # ----------------------------------------------- # 
 print("Finished")
 total = time.time() - ss
-print(total)
 print('TIME USED =', int(total // 3600), 'hour', int(total // 60), 'min', int(total % 60) + 1, 'seconds')
 #os.remove("Simple.pdf")
