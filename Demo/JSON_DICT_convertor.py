@@ -2,13 +2,16 @@ import json
 # ------------------------------------------ #
 def Dict2JSON(D, Filename):
     fout = open(Filename, "w")
-    json.dump(D, fout)
+    json.dump(D, fout, indent = 4)
     fout.close()
     return
 # ------------------------------------------ #
 def JSON2Dict(Filename):
     fin = open(Filename, "r")
-    D = json.loads(fin.readline())
+    json_string = ''
+    for d in fin.readlines():
+        json_string += d.strip()
+    D = json.loads(json_string)
     fin.close()
     return D
 # ------------------------------------------ #
