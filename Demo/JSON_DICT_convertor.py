@@ -2,7 +2,7 @@ import json
 # ------------------------------------------ #
 def Dict2JSON(D, Filename):
     fout = open(Filename, "w")
-    json.dump(D, fout, indent = 4)
+    json.dump(D, fout, ensure_ascii = False, indent = 4)
     fout.close()
     return
 # ------------------------------------------ #
