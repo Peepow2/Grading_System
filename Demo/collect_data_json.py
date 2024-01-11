@@ -11,6 +11,7 @@ for line in fin.readlines():
     DATA[ID]['Name'] = Name.strip()
     DATA[ID]['score'] = 60.0
     DATA[ID]['ROOM'] = '301'
+    DATA[ID]['Faculty'] = 'Chulalongkorn'
 fin.close()
 JDC.Dict2JSON(DATA, 'DATA.json')
 
