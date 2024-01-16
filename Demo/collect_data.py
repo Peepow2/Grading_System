@@ -1,4 +1,4 @@
-import JSON_DICT_convertor as JDC
+import JSON_convertor as JDC
 
 fin = open('Name_ID_gen.txt', 'r')
 DATA = dict()
