@@ -17,6 +17,3 @@ JDC.Dict2JSON(DATA, 'DATA.json')
 
 DATA2 = JDC.JSON2Dict('DATA.json')
 print(DATA2)
-
-
-
