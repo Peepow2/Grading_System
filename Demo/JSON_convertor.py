@@ -15,3 +15,9 @@ def JSON2Dict(Filename):
     fin.close()
     return D
 # ------------------------------------------ #
+def class2json(C, filename):
+    fout = open(filename, 'w'):
+    fout.write(json.dump(C.__dict__, fout, ensure_ascii = False, indent = 4))
+    fout.close()
+    return
+# ------------------------------------------ #
