@@ -31,5 +31,5 @@ def Room_organization(Seq_Name):
     fout.close()
     return
 # ------------------------------------------------------------------------- #
-Seq_Name = [('00' + str(e+1))[-3::] for e in range(8*15)]
+Seq_Name = [('00' + str(e+1))[-3::] for e in range(264)]
 Room_organization(Seq_Name)
