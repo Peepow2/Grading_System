@@ -8,10 +8,9 @@ import OMR
 
 S = time.time()
 
-Solution = OMR.Read_AnswerSheet("TPAT3/testcase/Listdir/NO_0003.png")
-
-for f_AnswerSheet in os.listdir("TPAT3/testcase/Listdir"):
-    DATA = OMR.Read_AnswerSheet("TPAT3/testcase/Listdir/" + f_AnswerSheet)
+path = ""
+for f_AnswerSheet in os.listdir(path):
+    DATA = OMR.Read_AnswerSheet(path + '/' + f_AnswerSheet)
     #print(DATA)
     Score = 0
     if not DATA[0][3]:
@@ -21,7 +20,7 @@ for f_AnswerSheet in os.listdir("TPAT3/testcase/Listdir"):
     print(DATA[0][0], '-->', round(Score / 3, 2))
     
 try:    
-    shutil.rmtree('TPAT3/__pycache__')
+    shutil.rmtree('__pycache__')
 except: 
     pass
 # Uninstall_Package(p)
