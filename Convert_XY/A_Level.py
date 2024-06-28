@@ -37,9 +37,12 @@ def ConvertXY(SHADE_FOUND):
 # ---------------------------------------------------------- #
 def Score(Ans, SOLUTION):
     score = 0
-    for i in range(70):
+    for i in range(25):
         if len(Ans[i]) == 1:
             if Ans[i] in SOLUTION[i]:
-                score += (4 * int(0 <= i < 60)) + (6 * int(60 <= i < 70))
-    return round(score/3, 2)
+                score += 3
+    for i in range(25, 30):
+        if Ans[i] == SOLUTION[i]:
+            score += 5
+    return score
 # ---------------------------------------------------------- #
