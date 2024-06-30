@@ -4,7 +4,7 @@ def get_No_Ques(i, j):
     if 48 <= i <= 52: return (5 * col) + i - 3
 
 def get_Choice(i, j):
-    return str((j - 6) % 7) if 1 <= (j - 6) % 7 <= 5 else ''
+    return str((j - 5) % 7) if 1 <= (j - 5) % 7 <= 5 else ''
 # ---------------------------------------------------------- #
 def ConvertXY(SHADE_FOUND):
     # Answer = [Answer]
